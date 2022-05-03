@@ -1,0 +1,403 @@
+@charset "UTF-8";
+/* CSS Document */
+
+*{
+	margin: 0px;
+	padding: 0px;
+	list-style: none;
+	text-decoration: none;
+	box-sizing: border-box;
+	font-family: 'BIZ UDPGothic', sans-serif;
+	font-family: 'Source Code Pro', monospace;
+	
+}
+
+body{
+	width: 100vw;
+	height: 100%;
+	font-size: 62.5%; /*pxのとき、１０pxになる。remにしたとき1.0rem*/
+	font-weight: lighter;
+	overflow: auto;
+	background-color: #FFFFFF;
+}
+
+/*ここからヘッダー　各ページ共通*/
+
+/*モバイル版メニュー*/
+.menu-btn{
+	display: none;
+}
+/*モバイル版メニュー*/
+.menu{
+	display: none;
+}
+
+.Header{
+	position: fixed;
+	display: block;
+	top: 0;
+	width: 100vw;
+	height: 120px;
+	padding: 80px 10px  0;
+	background-color: rgba(255,255,255,0.95);
+	z-index: 10;
+	/*border: 1px solid #ccc*/
+}
+
+.HeaderTitle{
+	position: absolute;
+	font-size: 2.0rem;
+	font-weight: normal;
+	top: 50%;
+	transform: translateY(-50%) translateX(0%);
+}
+
+.headerMenu{
+	position: absolute;
+	overflow: hidden;
+	font-size: 0.7rem;
+	top: 50%;
+	right: 50px;
+	transform: translateY(-50%) translateX(0%);
+	
+}
+
+.headerMenuItem{
+	 float: left;
+	margin-left: 30px;
+}
+
+.headerMenuItem a{
+	text-decoration: none;
+	color:#8A8A8A;
+	padding: 6px 0;
+}
+
+.headerMenuItem a:hover{
+	color: #000000;
+}
+
+.headerMenuItem .work{
+	color: #000000;
+}
+
+/*ここまでヘッダー*/
+
+#contents{
+	margin:0 auto;
+	width: 95vw;
+	max-width: 1350px;
+	margin-top: 120px;
+	/*border: 1px solid #ccc*/
+}
+
+article{
+	
+	padding: 0px 10px;
+	/*border: 1px solid #ccc*/
+}
+
+figure {
+	display: inline-block;
+    justify-content: space-between;
+	width: 30vw;
+	max-width: 438px;
+	height: 400px;
+	margin-left: 0px;
+	margin-bottom: 50px;
+	padding:15px;
+	
+	transition-duration: 0.5s;
+	/*border: 1px solid #ccc;*/
+	
+}
+
+figure:hover {
+	background-color:#E2E2E2;
+	border-radius:10px;
+	cursor:pointer;
+}
+
+.contentImage{
+}
+
+figure img{
+	display: block;
+	height: 300px;
+	object-fit: contain;
+	width: 100%;
+	/*border: 1px solid #ccc;*/
+}
+
+figcaption{
+	padding-top: 10px;
+	font-size: 0.7rem;
+	text-decoration: none;
+	color: #000000;
+}
+
+figcaption .title{
+	font-weight: bold;
+}
+
+
+
+.footer{
+	position: relative;
+	height: 100%;
+	margin: 0 auto;
+}
+
+.footer p{
+	width: 100%;
+	text-align: center;
+	padding: 90px 0 10px;
+	
+	position: absolute;
+	bottom: 0px;
+}
+
+
+@media screen and (max-width:1024px) {/* 1024pxまでの幅の場合に適応される */
+	
+}
+	
+@media screen and (max-width:768px) {/* 768pxまでの幅の場合に適応される */
+	
+     /*ここからヘッダー　各ページ共通*/
+	.Header{
+		height: 80px;
+		padding: 40px 20px 0;
+		
+	}
+
+	.HeaderTitle{
+		font-size: 1.2rem;
+		font-weight: bold;
+	}
+	
+	.headerMenu{
+	position: absolute;
+	overflow: hidden;
+	font-size: 0.65rem;
+	top: 50%;
+	right: 20px;
+	transform: translateY(-50%) translateX(0%);
+	}
+
+	.headerMenuItem{
+		float: left;
+		margin-left: 15px;
+	}
+
+	.headerMenuItem a{
+		text-decoration: none;
+		color:#8A8A8A;
+		padding: 6px 0;
+	}
+	
+	/*ここまでヘッダー*/
+
+	
+#contents{
+	margin: 0 auto;
+	width: 97vw;
+	margin-top: 120px;
+	/*border: 1px solid #ccc*/
+}
+
+article{
+	margin:0 auto;
+	padding: 0px 10px;
+	/*border: 1px solid #ccc*/
+}
+
+figure {
+	display: inline-block;
+    justify-content: space-between;
+	width: 45.6vw;
+	max-width: 900px;
+	height: 380px;
+	margin-left: 0px;
+	margin-bottom: 50px;
+	padding-top:10px;
+	
+	transition-duration: 0.5s;
+	/*border: 1px solid #ccc;*/
+}
+
+	figure img{
+		display: block;
+		height: 300px;
+		object-fit: contain;
+		width: 100%;
+		/*border: 1px solid #ccc;*/
+	}
+
+}
+  
+@media screen and (max-width:480px) { /* 480pxまでの幅の場合に適応される */
+
+	
+    /*ここからヘッダー　各ページ共通*/
+	
+	.Header{
+		height: 60px;
+		padding: 30px 10px 0;
+		
+	}
+
+	.HeaderTitle{
+		font-size: 1.2rem;
+		font-weight: bold;
+	}
+
+	/*メニュー開閉ボタン*/
+	.menu-btn{
+ 	 	position: fixed;
+ 	 	top: 7px;
+ 		right: 15px;
+ 	 	z-index: 21;
+ 	 	width: 40px;
+ 		height: 40px;
+ 		display: flex;
+ 	 	justify-content: center;
+ 	 	align-items: center;
+		cursor:pointer;
+ 		color: #fff;
+	}
+	
+	.hamburger_line {
+    	position: absolute;
+    	left: 8px;
+    	width: 25px;
+   		height: 1px;
+    	background-color: #111;
+    	-webkit-transition: all .6s;
+    	transition: all .6s;
+	}
+	
+	.hamburger_line_1 {
+    	top: 20px;
+	}
+/*.hamburger_line_2 {
+    top: 26px;
+}*/
+	.hamburger_line_3 {
+    	top: 28px;
+	}	
+
+	/*メニュー本体*/
+	.menu{
+	  position: fixed;
+	  top: 0;
+	  right: 0;
+	  z-index: 20;
+ 	 width: 100vw;
+  	height: 100vh;
+ 	 display: flex;
+ 	 flex-direction: column;
+  	align-items: center;
+  	justify-content: center;
+  	background:#C1C1C1;
+	}
+	
+	.menu__item{
+		text-decoration: none;
+ 	 width: 100%;
+ 	 height: auto;
+		padding-bottom: 1rem;
+ 	 text-align: center;
+		box-sizing: border-box;
+	}
+	
+	.menu__item a{
+		text-decoration: none;
+		color:#6A6A6A;
+		font-size: 1.2rem;
+	}
+	
+	.menu__item a:hover{
+		color:#000000;
+	}
+	
+	.menu__item .work{
+	color: #000000;
+}
+
+	
+/* アニメーション部分-*/
+
+	/* アニメーション前のメニューの状態 */
+	.menu{
+		transform: translateX(100vw);
+		transition: all .3s linear;
+	}
+	/* アニメーション後のメニューの状態 */
+	.menu.is-active{
+		transform: translateX(0);
+	}
+	
+	/*PC用メニュー*/
+	.headerMenu{
+		display: none;
+	}
+	
+	
+	/*ここまでヘッダー*/
+
+	#contents{
+		position: relative;
+		width: 100%;
+		margin:0 auto;
+		margin-top: 60px;
+		/*border: 1px solid #ccc*/
+	}
+
+	article{
+		margin:0 auto;
+		padding: 20px 0;
+	}
+
+	figure {
+		display: inline-block;
+    	justify-content: space-between;
+		width: 100vw;
+		height: 400px;
+		margin-left: 0px;
+		margin-bottom: 30px;
+		
+		transition-duration: 0.5s;
+		/*border: 1px solid #ccc;*/
+	
+	}
+
+	figure:hover {
+		background-color:#E2E2E2;
+		border-radius:10px;
+		cursor:pointer;
+	}
+
+	.contentImage{
+	}
+
+	figure img{
+		display: block;
+		height: 300px;
+		object-fit: contain;
+		width: 100%;
+		/*border: 1px solid #ccc;*/
+	}
+
+	figcaption{
+		padding-top: 10px;
+		font-size: 0.7rem;
+		text-decoration: none;
+		color: #000000;
+	}
+
+	figcaption .title{
+		font-weight: bold;
+	}
+}
+ 
