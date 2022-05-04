@@ -132,6 +132,10 @@ figcaption .title{
 	padding-right: 40px;
 }
 
+.link{
+	font-size:1rem;
+}
+
 #subImage img{
 	width: 95%;
 	max-width: 700px;
